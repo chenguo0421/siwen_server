@@ -1,4 +1,4 @@
-package com.xqkj.siwencat.models;
+package com.xqkj.siwencat.models.database;
 
 import java.io.Serializable;
 import java.util.Date;

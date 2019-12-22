@@ -1,15 +1,18 @@
-package com.xqkj.siwencat.controller;
+package com.xqkj.siwencat.controller.database;
 
-import com.xqkj.siwencat.dao.UserMapper;
-import com.xqkj.siwencat.models.User;
+import com.xqkj.siwencat.basebean.ResEntity;
+import com.xqkj.siwencat.dao.database.UserMapper;
+import com.xqkj.siwencat.models.database.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 @RestController
 public class UserController {
+
 
     @Resource
     private UserMapper userService;
@@ -33,15 +36,16 @@ public class UserController {
         return userService.selectByPrimaryKey(id);
     }
 
+
     /**
      * 添加数据
-     * @param user
      * @return
      */
-    @RequestMapping("/insert")
+    @RequestMapping("/registerConfirm")
     public int insert (User user){
         return userService.insert(user);
     }
+
 
     /**
      * 删除
