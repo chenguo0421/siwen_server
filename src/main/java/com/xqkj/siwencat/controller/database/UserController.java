@@ -1,6 +1,5 @@
 package com.xqkj.siwencat.controller.database;
 
-import com.xqkj.siwencat.basebean.ResEntity;
 import com.xqkj.siwencat.dao.database.UserMapper;
 import com.xqkj.siwencat.models.database.User;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 
 @RestController
 public class UserController {

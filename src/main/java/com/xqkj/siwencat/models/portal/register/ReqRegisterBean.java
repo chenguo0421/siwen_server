@@ -1,5 +1,8 @@
 package com.xqkj.siwencat.models.portal.register;
 
+/**
+ * 注册-手机号验证请求参数实例
+ */
 public class ReqRegisterBean {
     private String phone;
     private String imei;
