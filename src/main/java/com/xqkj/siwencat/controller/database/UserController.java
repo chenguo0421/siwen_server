@@ -19,7 +19,6 @@ public class UserController {
      * 查询全部
      * @return
      */
-    @RequestMapping("/listAll")
     public Object selectAll(){
         return userService.selectAll();
     }
@@ -29,7 +28,6 @@ public class UserController {
      * @param id
      * @return
      */
-    @RequestMapping("/user")
     public Object selectByPrimaryKey(@RequestParam(value = "id",defaultValue = "1")int id){
         return userService.selectByPrimaryKey(id);
     }
@@ -39,7 +37,6 @@ public class UserController {
      * 添加数据
      * @return
      */
-    @RequestMapping("/registerConfirm")
     public int insert (User user){
         return userService.insert(user);
     }
@@ -49,7 +46,6 @@ public class UserController {
      * 删除
      * @return
      */
-    @RequestMapping("/remove")
     public int remove(int id){
         return userService.deleteByPrimaryKey(id);
     }
@@ -59,8 +55,17 @@ public class UserController {
      * @param user
      * @return
      */
-    @RequestMapping("/update")
     public int update(User user){
         return userService.updateByPrimaryKey(user);
+    }
+
+
+    /**
+     * 查询用户
+     * @param userName
+     * @return
+     */
+    public User selectByUserName(String userName) {
+        return userService.selectByUserName(userName);
     }
 }

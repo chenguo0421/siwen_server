@@ -46,4 +46,12 @@ public interface UserMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(User record);
+
+
+    /**
+     * 查询用户
+     * @param userName
+     * @return
+     */
+    User selectByUserName(String userName);
 }

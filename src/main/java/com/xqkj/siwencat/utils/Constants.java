@@ -8,4 +8,6 @@ public class Constants {
     public static final String PHONE_KEY = "phone_key";
 
     public static final String PSW_MODIFY_KEY = "psw_modify_key";
+
+    public static final String LOGIN_USER_KEY = "login_user_key";
 }
